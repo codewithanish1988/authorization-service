@@ -1,0 +1,29 @@
+spring:
+  security:
+    user:
+      name: user1
+      password: "{bcrypt}$2a$10$jbgb4hYzyy.C.IPJq20Ck.Z75kiJZ0BaTZk1M7f/gjh8Wym0zeFYi"
+    oauth2:
+      authorization-server:
+        client:
+          api-client:
+            registration:
+              client-id: api-client-id
+              client-secret: "{bcrypt}$2a$10$p6zo.eK7BRBH43yhzO2HI.3nNnwvqLK.L4/JseUWuRwPrdNc6iPZK"
+              client-authentication-methods:
+                - client_secret_basic
+              authorization-grant-types:
+                - authorization_code
+                - refresh_token
+                - client_credentials
+              redirect-uris:
+                - http://127.0.0.1:5000/login/oauth2/code/api-client
+              scopes:
+                - openid
+                - profile
+                - read
+                - write
+            token:
+              access-token-time-to-live: 3600s       # 1 hour
+              refresh-token-time-to-live: 30d        # <-- add this
+              reuse-refresh-tokens: true             # <-- add this

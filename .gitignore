@@ -1,0 +1,43 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven
+target/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+*.sw?
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Others
+*.log
+*.tmp
+*.bak
+
+# Mac
+.DS_Store
+
+# Environment
+.env
